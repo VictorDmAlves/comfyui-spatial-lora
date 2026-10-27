@@ -103,11 +103,11 @@ Connect your diffusion model to the `Spatial LoRA | Multi LoRA node`, then send 
 Your existing text encoding, conditioning, and VAE setup remain unchanged. Simply select your LoRAs, open the `Spatial Editor`, and define where each one should be applied.
 
 ## Example Workflows
-Ready-to-configure JSON files are included in [workflows/](.workflows/):
-- [Z-Image Turbo Spatial TXT2IMG](.workflow/)
-- [Z-Image Turbo Spatial IMG2IMG](.workflow/)
+Ready-to-configure JSON files are included in [workflows/](./workflows/):
+- [Z-Image Turbo Spatial TXT2IMG](./workflows/)
+- [Z-Image Turbo Spatial IMG2IMG](./workflows/)
 
-Load them into ComfyUI and select your **own** model files, LoRAs, and prompt. Both templates intentionally start without a selected LoRA. For the IMG2IMG Workflow, see `workflows/assets/example.png` and the setup note for a quick explanation.
+Load them into ComfyUI and select your **own** model files, LoRAs, and prompt. Both templates intentionally start without a selected LoRA. For the IMG2IMG Workflow, see [workflows/assets/example.png](./workflows/assets/example.png) and the setup note for a quick explanation.
 
 ## Node fields
 | Field | Purpose |
