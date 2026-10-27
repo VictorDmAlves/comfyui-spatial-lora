@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "type": "module",
+  "description": "Local JavaScript geometry tests for the Spatial LoRA editor"
+}
