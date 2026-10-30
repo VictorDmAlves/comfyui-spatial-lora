@@ -88,7 +88,7 @@ class SpatialMultiLoRA:
             "model": ("MODEL",),
             "width": ("INT", {"default": 1024, "min": 64, "max": 8192, "step": 16}),
             "height": ("INT", {"default": 1024, "min": 64, "max": 8192, "step": 16}),
-            "backend": (["auto", "zimage_nextdit"], {"default": "auto"}),
+            "backend": (["auto", "zimage_nextdit", "anima_cosmos2"], {"default": "auto"}),
             "regions_json": ("STRING", {"default": DEFAULT_LAYOUT_JSON, "multiline": False}),
         }
         for i in (1, 2, 3):
@@ -126,7 +126,7 @@ class SpatialMultiLoRA:
                 raise ValueError(f"Spatial LoRA: Region {idx} ({config['name']}) enabled but no LoRA selected")
             if strength == 0:
                 continue
-            adapters = self.adapter_cache.get(name)
+            adapters = self.adapter_cache.get(name, resolved.backend_id)
             active.append(SpatialRegion(adapters, mask, float(strength), f"{config['name']} : {name}"))
             active_slots.append(idx)
         result = resolved.attach(model, active)

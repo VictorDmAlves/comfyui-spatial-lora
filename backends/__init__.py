@@ -1,7 +1,8 @@
 """Model-specific backend registry. New architectures should implement this contract."""
 from .zimage import ZImageBackend, SpatialModelWrapper
+from .anima import AnimaBackend
 
-BACKENDS = {"zimage_nextdit": ZImageBackend()}
+BACKENDS = {"zimage_nextdit": ZImageBackend(), "anima_cosmos2": AnimaBackend()}
 
 
 def resolve_backend(model, requested="auto"):
@@ -13,7 +14,7 @@ def resolve_backend(model, requested="auto"):
                 return backend
         raise TypeError(
             "Spatial LoRA: no compatible backend detected. "
-            "v0.6 currently supports native Z-Image NextDiT models only "
+            "this experimental build supports native Z-Image NextDiT and Anima Cosmos-Predict2 only "
             "(not GGUF, Nunchaku, FLUX, Qwen, or WAN)."
         )
     backend = BACKENDS[requested]

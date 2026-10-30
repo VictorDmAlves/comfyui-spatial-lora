@@ -27,13 +27,8 @@ The `auto` backend detects a **supported** architecture; it does not automatical
 - [ ] FLUX
 - [ ] FLUX Klein
 - [ ] Krea 2
-- [ ] Anima
-- [ ] SDXL
-- [ ] Illustrious
 - [ ] MOSS
-- [ ] WAN 2.2 — image generation only
-- [ ] Qwen 2511 Image Edit
-- [ ] Qwen 2512
+- [ ] Qwen
 
 Unfortunately, the models I’ve selected are based on the limitations of my own machine (in terms of what I’m able to run), but please feel free to fork the project and add your own compatibility options; I’ll be working on my own regardless.
 
